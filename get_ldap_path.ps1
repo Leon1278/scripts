@@ -9,5 +9,8 @@ $PDC = $domainObj.PdcRoleOwner.Name
 # Store the Distinguished Name variable into the $DN variable
 $DN = ([adsi]'').distinguishedName
 
-# Print the $DN variable
-$DN
+# create LDAP path
+$LDAP = "LDAP://$PDC/$DN"
+
+# print LDAP path
+$LDAP
