@@ -5,7 +5,8 @@
 #                                                -> 'LDAPSearch -LDAPQuery "(objectclass=group)"'
 
 # We can store query results into a variable an then access different properties
-#                                                -> '$group = LDAPSearch -LDAPQuery "(&(objectCategory=group)(cn=Development Department*))"' -> '$group.properties.member'
+#                                                -> '$group = LDAPSearch -LDAPQuery "(&(objectCategory=group)(cn={group-name}*))"' -> '$group.properties.member'
+#                                                -> '$user = LDAPSearch -LDAPQuery "(&(objectCategory=user)(cn={user-name}*))"' -> '$user.properties'
 
 function LDAPSearch {
     param (
