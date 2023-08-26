@@ -12,11 +12,23 @@ $DN = ([adsi]'').distinguishedName
 # create LDAP path
 $LDAP = "LDAP://$PDC/$DN"
 
-# print LDAP path
-$LDAP
-
 $direntry = New-Object System.DirectoryServices.DirectoryEntry($LDAP)
 
 $dirsearcher = New-Object System.DirectoryServices.DirectorySearcher($direntry)
 
-$dirsearcher.FindAll()
+# filter for all user ojects
+$dirsearcher.filter="samAccountType=805306368"
+
+$result = $dirsearcher.FindAll()
+
+# iterate over properties of object
+Foreach($obj in $result)
+{
+    Foreach($prop in $obj.Properties)
+    {
+        $prop
+    }
+
+    Write-Host "-------------------------------"
+}
+
