@@ -1,6 +1,6 @@
 #Hint: Import this function in powershell to be able to use it as cmdlet -> "Import-Module .\ad_enum_as_function.ps1"
 # We can now query using the function LDAPSearch -> 'LDAPSearch -LDAPQuery "(samAccountType=805306368)"'
-                                                 -> 'LDAPSearch -LDAPQuery "(objectclass=group)"'
+#                                                -> 'LDAPSearch -LDAPQuery "(objectclass=group)"'
 
 function LDAPSearch {
     param (
