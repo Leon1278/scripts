@@ -14,3 +14,9 @@ $LDAP = "LDAP://$PDC/$DN"
 
 # print LDAP path
 $LDAP
+
+$direntry = New-Object System.DirectoryServices.DirectoryEntry($LDAP)
+
+$dirsearcher = New-Object System.DirectoryServices.DirectorySearcher($direntry)
+
+$dirsearcher.FindAll()
