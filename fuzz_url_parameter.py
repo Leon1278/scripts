@@ -9,7 +9,7 @@ for word in f:
     res = requests.get(f'http://192.168.189.247/pdfs/{word}.pdf')
     counter += 1
     if res.status_code == 200:
-        result.add(word)
+        result.append(word)
         counter_found += 1
         
 print("####################Finished#######################")
