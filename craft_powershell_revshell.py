@@ -1,3 +1,5 @@
+#Hint: if direct execution like -c "powershell -e SHELLCODE" is not working, try powershell.exe -a "-e SHELLCODE"
+
 import sys
 import base64
 
