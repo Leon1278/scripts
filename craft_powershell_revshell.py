@@ -1,4 +1,4 @@
-#Hint: if direct execution like -c "powershell -e SHELLCODE" is not working, try -c powershell.exe -a "-e SHELLCODE"
+#Hint: if direct execution like cmd.exe -c "powershell -e SHELLCODE" is not working, try -c powershell.exe -a "-e SHELLCODE"
 
 import sys
 import base64
